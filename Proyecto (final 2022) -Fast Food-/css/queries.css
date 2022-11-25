@@ -1,0 +1,137 @@
+/*********************** MEDIA QUERIES ***********************/
+/*************************************************************/
+
+@media (max-width: 865px) {
+  .tablas .container .contenido {
+    grid-template-columns: 160px 160px 160px 160px;
+    grid-template-rows: 200px 200px;
+    grid-template-areas:
+      "burger burger pizzas pizzas"
+      "burger burger carne carne";
+  }
+}
+
+@media (max-width: 850px) {
+  .nav {
+    padding: 1rem;
+  }
+  .promocion .text-promocion {
+    font-size: 1.5rem;
+  }
+  .promocion .email-promocion input {
+    width: 15rem;
+  }
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 715px) {
+  .tablas .container .contenido {
+    width: 85vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px 180px 180px;
+    grid-template-areas:
+      "burger"
+      "pizzas"
+      "carne";
+  }
+}
+
+@media (max-width: 680px) {
+  .nav .container .nav-iner .nav-bar {
+    position: absolute;
+    top: 73px;
+    flex-direction: column;
+    display: flex;
+    background: black;
+    right: 10px;
+    width: 225px;
+    right: -110%;
+    border-radius: 5px;
+  }
+
+  .nav .container .nav-iner .nav-bar.active {
+    right: 20px;
+    transition: 0.4s linear;
+  }
+
+  .nav .container .nav-iner .nav-bar ul {
+    display: block;
+  }
+
+  .nav .container .nav-iner .nav-bar a {
+    font-size: 20px;
+    padding: 1.2rem 1.5rem;
+    display: block;
+  }
+
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .nav .container .nav-iner .search-form {
+    width: 90%;
+  }
+
+  .nav .container .nav-iner .search-form.active {
+    right: 1rem;
+  }
+
+  .nav .container .nav-iner .shopping-cart.active {
+    right: 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .hero .container .contenido .heading-hero {
+    font-size: 2.5rem;
+  }
+  .hero .container .contenido {
+    font-size: 80%;
+  }
+
+  .tablas .container .contenido span {
+    font-size: 1.2rem;
+  }
+  .comidas .contenido p,
+  .testimonios .text p {
+    font-size: 0.8rem;
+  }
+
+  .comidas .contenido .titulo-comidas-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .testimonios .text h2 {
+    font-size: 1.5rem;
+    width: 255px;
+  }
+  .testimonios .text {
+    margin-top: 0;
+  }
+  .promocion {
+    height: 15rem;
+  }
+  .container-promo {
+    width: auto;
+  }
+  .promocion .text-promocion {
+    font-size: 1rem;
+  }
+  .promocion .text-promocion h3 {
+    line-height: 1.5rem;
+  }
+  .promocion .email-promocion input {
+    width: 13rem;
+    height: 2.7rem;
+  }
+  .promocion .email-promocion .btn-enviar-promo {
+    padding: 0.6rem 1.5rem;
+  }
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}

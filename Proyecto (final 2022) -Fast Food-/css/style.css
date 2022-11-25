@@ -1,0 +1,719 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+* {
+  font-family: "poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  outline: none;
+  border: none;
+  list-style-type: none;
+}
+
+/************************** NAV **************************/
+/*********************************************************/
+.nav {
+  background: rgb(34, 34, 34);
+  position: fixed;
+  padding: 1rem 9%;
+  width: 100vw;
+  box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.1);
+}
+
+.nav .container .nav-iner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .container .nav-iner .logo {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav .container .nav-iner .logo .fa-burger {
+  font-size: 1.4rem;
+  color: orange;
+}
+
+.nav .container .nav-iner .nav-bar ul {
+  display: flex;
+}
+
+.nav .container .nav-iner .nav-bar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem 1rem;
+  font-size: 0.9rem;
+}
+
+.nav .container .nav-iner .nav-bar a:hover {
+  color: rgb(253, 114, 0);
+  font-weight: 700;
+  transition-duration: 0.3s;
+  border-bottom: 1px solid rgb(253, 114, 0);
+}
+
+.nav .container .nav-iner .iconos i {
+  padding: 0.4rem 0.4rem;
+  color: #fff;
+  background: rgb(34, 34, 34);
+  border-radius: 50%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  box-shadow: 2px 5px 10px -7px rgba(0, 0, 0, 0.9);
+}
+
+.nav .container .nav-iner .iconos i:hover {
+  background-color: rgb(253, 114, 0);
+}
+
+#search-btn,
+#cart-btn {
+  margin-right: 0.4rem;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.nav .container .nav-iner .search-form {
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  width: 25rem;
+  height: 2.5rem;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+}
+
+.nav .container .nav-iner .search-form.active {
+  right: 2rem;
+  transition: 0.4s linear;
+}
+
+.nav .container .nav-iner .search-form input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1rem;
+  color: var(--black);
+  padding: 0 15px;
+}
+
+.nav .container .nav-iner .search-form label {
+  font-size: 1rem;
+  padding-right: 15px;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.nav .container .nav-iner .search-form label:hover {
+  color: rgb(253, 114, 0);
+}
+
+.nav .container .nav-iner .shopping-cart {
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  width: 310px;
+  background: rgb(34, 34, 34);
+}
+
+.nav .container .nav-iner .shopping-cart .box-scroll {
+  background: #383838;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.nav .container .nav-iner .shopping-cart.active {
+  right: 2rem;
+  transition: 0.4s linear;
+}
+
+.nav .container .nav-iner .shopping-cart .box {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0.3rem;
+  gap: 10px;
+  position: relative;
+}
+
+.nav .container .nav-iner .shopping-cart .fa-xmark {
+  color: #fff;
+  position: absolute;
+  font-size: 1.2rem;
+  right: 16px;
+}
+
+.nav .container .nav-iner .shopping-cart .fa-xmark:hover {
+  color: rgb(253, 114, 0);
+  cursor: pointer;
+}
+
+.nav .container .nav-iner .shopping-cart .heading {
+  color: #fff;
+  text-align: center;
+  font-family: "Alfa Slab One", cursive;
+  font-weight: 200;
+}
+
+.nav .container .nav-iner .shopping-cart h3 {
+  padding: 0;
+  font-size: 27px;
+}
+
+.nav .container .nav-iner .shopping-cart .box img {
+  width: 80px;
+}
+
+.nav .container .nav-iner .shopping-cart .box .fa-trash {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  cursor: pointer;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.nav .container .nav-iner .shopping-cart .box .fa-trash:hover {
+  color: rgb(253, 114, 0);
+}
+
+.nav .container .nav-iner .shopping-cart .box .contenido h3 {
+  color: #fff;
+  font-size: 1rem;
+  padding-bottom: 10px;
+  width: 135px;
+}
+
+.nav .container .nav-iner .shopping-cart .box .contenido span {
+  color: rgb(218, 218, 218);
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.nav .container .nav-iner .shopping-cart .box .contenido .cantidad {
+  padding-left: 10px;
+  width: 2.5rem;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+.nav .container .nav-iner .shopping-cart .total {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.nav .container .nav-iner .shopping-cart .btn {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem 2rem;
+  background: black;
+  display: block;
+  text-align: center;
+  margin: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.nav .container .nav-iner .shopping-cart .btn:hover {
+  background-color: rgb(253, 114, 0);
+  transition: 0.4s;
+}
+
+/************************ HERO **************************/
+/********************************************************/
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../img/hero-bg.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero .container {
+  padding: 0 5%;
+}
+
+.hero .container .contenido .heading-hero {
+  color: #fff;
+  font-size: 3.5rem;
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 0.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hero .container .contenido p {
+  color: #fff;
+  font-weight: 300;
+}
+
+.hero .container .contenido a {
+  background: rgb(243, 117, 0);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.hero .container .contenido a:hover {
+  background: rgb(209, 101, 0);
+  color: #fff;
+  box-shadow: 2px 5px 10px -7px rgba(0, 0, 0, 0.9);
+  transition: 0.2s linear;
+}
+
+.hero .container .contenido .arrow {
+  margin-left: 0.2rem;
+}
+
+/************ Mensaje Alert Agregado al Carrito ************/
+/***********************************************************/
+.alert {
+  background-color: rgb(27, 214, 2);
+  padding: 0.5rem 0.4rem;
+  min-width: 320px;
+  border-radius: 0 5px 5px 0;
+  position: fixed;
+  top: 70px;
+  left: -110%;
+}
+
+.alert.show {
+  left: 0.5rem;
+  transition: 0.4s linear;
+}
+
+.alert.hide {
+  left: -110%;
+  transition: 0.5s;
+}
+
+.alert .msg {
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+.alert .closeBtn {
+  float: right;
+  padding: 0 8px;
+}
+
+.alert .closeBtn:hover {
+  cursor: pointer;
+}
+
+/************************** TABLAS **************************/
+/************************************************************/
+.tablas {
+  background: #383838;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tablas .container .contenido {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-template-areas:
+    "burger burger pizzas pizzas"
+    "burger burger carne carne";
+}
+
+.tablas .container .contenido span {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.burger {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/tabla/burger-tabla.webp);
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem 0 0 1.5rem;
+  background-size: cover;
+  background-position: center;
+  outline: 2px solid #fff;
+  outline-offset: -15px;
+  grid-area: burger;
+}
+
+.pizzas {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/tabla/pizza-tabla.webp);
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem 0 0 1.5rem;
+  background-size: cover;
+  background-position: center;
+  outline: 2px solid #fff;
+  outline-offset: -15px;
+  grid-area: pizzas;
+}
+
+.carne {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../img/tabla/carne-tabla.webp);
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem 0 0 1.5rem;
+  background-size: cover;
+  background-position: center;
+  outline: 2px solid #fff;
+  outline-offset: -15px;
+  grid-area: carne;
+}
+
+/************************** COMIDAS **************************/
+/************************************************************/
+.comidas {
+  height: auto;
+  background: rgb(223, 223, 223);
+  padding: 0 7%;
+}
+
+.comidas .contenido {
+  text-align: center;
+}
+
+.comidas .contenido .titulo-comidas-box {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comidas .contenido .titulo-comidas-box h2 {
+  font-size: 2rem;
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: rgb(243, 117, 0);
+}
+
+.comidas .contenido p {
+  padding-top: 1rem;
+}
+
+.comidas .contenido .iconos-comida {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.comidas .contenido .iconos-comida i {
+  color: black;
+  background: rgb(255, 255, 255);
+  padding: 1rem 1rem;
+  margin: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.comidas .contenido .iconos-comida i:hover {
+  color: #fff;
+  background: rgb(243, 117, 0);
+}
+
+#burger-btn.color,
+#pizza-btn.color,
+#bebidas-btn.color {
+  color: #fff;
+  background: rgb(243, 117, 0);
+}
+
+/****Box Hamburguesas*****/
+.comidas .contenido .burgersContainer.desactive {
+  display: none;
+}
+
+.comidas .contenido .pizzasContainer.desactive {
+  display: none;
+}
+
+.comidas .contenido .bebidasContainer.desactive {
+  display: none;
+}
+
+.comidas .contenido .box-comidas-container {
+  margin-top: 1rem;
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 17rem));
+  gap: 30px;
+  justify-content: center;
+}
+
+.comidas .contenido .box {
+  width: 17rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 20px 25px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.comidas .contenido .box:hover {
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.5);
+  transition-duration: 0.5s;
+}
+
+.comidas .contenido .box img {
+  width: 100%;
+  height: 170px;
+}
+
+.comidas .contenido .box .card-tittle {
+  padding: 0.5rem 0.2rem;
+  font-family: "Alfa Slab One", cursive;
+  font-weight: 200;
+  letter-spacing: 0.8px;
+  color: rgb(225 109 0);
+}
+
+.comidas .contenido .parrafo-box {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.7rem;
+}
+
+.comidas .contenido .box .precio {
+  font-weight: 400;
+  padding: 0.3rem 0;
+}
+
+.comidas .contenido .box .btnAgregar {
+  background: rgb(243, 117, 0);
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  padding: 0.5rem;
+}
+
+.comidas .contenido .box .btnAgregar:hover {
+  background: rgb(206, 93, 0);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/************************** TESTIMONIOS **************************/
+/************************************************************/
+.testimonios {
+  padding: 2rem 7%;
+  height: auto;
+  background: rgb(34, 34, 34);
+}
+
+.testimonios .text {
+  color: #fff;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.testimonios .text h2 {
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 0.1rem;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 20rem;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color: #383838;
+}
+
+.testimonios .text p {
+  margin-top: 1rem;
+  color: rgb(194, 193, 193);
+}
+
+.box-testimonios {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 17rem));
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.box-testimonios .box {
+  background-color: #aaa;
+  width: 17rem;
+  text-align: center;
+  border-radius: 15px;
+  padding: 0.8rem 1.3rem;
+}
+
+.box-testimonios .box img {
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.parrafo-testimonios {
+  font-size: 0.9rem;
+  padding: 1rem 0;
+}
+
+.box-testimonios .box .stars i {
+  color: rgb(218, 102, 0);
+}
+
+/*********************** SECTION PROMOCION ***********************/
+/*************************************************************/
+.promocion {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/img/promoción/fondo-promocion.webp);
+  background-size: cover;
+  background-position: center;
+  height: 20rem;
+  width: 100%;
+  margin: auto 0;
+}
+
+.container-promo {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.promocion .text-promocion {
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.promocion .text-promocion p {
+  font-weight: 300;
+}
+
+.promocion .text-promocion h3 {
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  text-align: center;
+}
+
+.promocion .email-promocion input {
+  background-color: rgb(37, 37, 37);
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #fff;
+  border: 1px solid rgb(78, 78, 78);
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.promocion .email-promocion input:focus {
+  border: 1px solid rgb(165, 164, 164);
+}
+
+.promocion .email-promocion .btn-enviar-promo {
+  padding: 1rem 1.5rem;
+  background-color: white;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.promocion .email-promocion .btn-enviar-promo:hover {
+  cursor: pointer;
+  background-color: rgb(163, 162, 162);
+  transition-duration: 0.3s;
+}
+
+/*********************** FOOTER ***********************/
+/******************************************************/
+
+.footer {
+  height: auto;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+.container-footer {
+  padding-bottom: 2rem;
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer .titulo-footer {
+  font-family: "Alfa Slab One", cursive;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer ul li {
+  line-height: 2rem;
+}
+
+.footer .link-footer a {
+  text-decoration: none;
+  color: rgb(156, 154, 154);
+  font-weight: 400;
+}
+
+.footer .link-footer a:hover {
+  color: white;
+  padding-left: 1rem;
+  transition-duration: 0.3s;
+}
+
+.footer .contact .redes a {
+  color: rgb(156, 154, 154);
+  font-size: 1.3rem;
+}
+
+.footer .contact .redes .margin-right {
+  margin-right: 1rem;
+}
+
+.footer .contact .redes a:hover {
+  color: white;
+}

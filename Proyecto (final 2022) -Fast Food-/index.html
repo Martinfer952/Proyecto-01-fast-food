@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fast Food</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!---------------------- INICIO NAV ---------------------->
+    <!-------------------------------------------------------->
+    <nav class="nav">
+      <div class="container">
+        <div class="nav-iner">
+          <div class="logo">
+            <i class="fa-solid fa-burger"></i>
+            <h3>Logo Name</h3>
+          </div>
+          <div class="nav-bar">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#menu">Menú</a></li>
+              <li><a href="#testimonios">Testimonios</a></li>
+              <li><a href="#footer">Contácto</a></li>
+            </ul>
+          </div>
+          <div class="iconos">
+            <i class="fas fa-search" id="search-btn"></i>
+            <i class="fa-solid fa-cart-shopping" id="cart-btn"></i>
+            <i class="fas fa-bars" id="menu-btn"></i>
+          </div>
+          <!-------- Boton search y carrito -------->
+          <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="Buscar aqui..." />
+            <label for="search-box" class="fas fa-search"></label>
+          </form>
+          <div class="shopping-cart">
+            <i class="fa-solid fa-xmark"></i>
+            <h3 class="heading">Mi Carrito</h3>
+            <div class="box-scroll tbody"></div>
+            <div class="total">Total : $0</div>
+            <a href="#" class="btn">checkout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!---------------------- INICIO HERO --------------------->
+    <!-------------------------------------------------------->
+    <header class="hero" id="home">
+      <div class="container">
+        <div class="contenido">
+          <h1 class="heading-hero">¡Pedí tu combo y disfruta!</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
+            optio illum accusamus expedita autem doloremque!
+          </p>
+          <a class="btn" href="#"
+            >Ordenar ahora <i class="fa-solid arrow fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </header>
+
+    <!--------------- MENSAJE AGREGADO CARRITO --------------->
+    <!-------------------------------------------------------->
+    <div class="alert hide">
+      <span class="fas fa-check-circle"></span>
+      <span class="msg">¡Agregado al carrito!</span>
+      <span class="closeBtn">
+        <span class="fas fa-times"></span>
+      </span>
+    </div>
+
+    <!------------------- INICIO TABLA GRID ------------------->
+    <!-------------------------------------------------------->
+    <section class="tablas" id="menu">
+      <div class="container">
+        <div class="contenido">
+          <a class="burger" href="#"
+            >Hamburguesas <br /><span>Simplemente perfectas</span></a
+          >
+          <a class="pizzas" href="#"
+            >Pizzas <br /><span>Únicas en el mundo</span></a
+          >
+          <a class="carne" href="#">Cena <br /><span>Para deleitar</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------- INICIO COMIDAS -------------------->
+    <!-------------------------------------------------------->
+    <section class="comidas" id="comidas">
+      <div class="contenido">
+        <div class="titulo-comidas-box">
+          <h2>¡ARME SU PROPIO COMBO!</h2>
+        </div>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum
+          numquam assumenda totam animi. Illum, labore numquam!
+        </p>
+        <div class="iconos-comida">
+          <i class="fa-solid fa-burger color" id="burger-btn"></i>
+          <i class="fa-solid fa-pizza-slice" id="pizza-btn"></i>
+          <i class="fa-solid fa-wine-glass" id="bebidas-btn"></i>
+        </div>
+        <!-- Seccion de hamburguesas -->
+        <div class="box-comidas-container burgersContainer">
+          <div class="box">
+            <img class="box-img" src="img/comidas/hamburguesa-1.jpg" alt="" />
+            <h3 class="card-tittle">Hamburguesa Clásica</h3>
+            <p class="parrafo-box">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus animi, beatae consequuntur reiciendis amet aut!
+            </p>
+            <h3 class="precio">$500</h3>
+            <button class="btnAgregar">
+              Agregar al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+          <div class="box">
+            <img class="box-img" src="img/comidas/hamburguesa-2.jpg" alt="" />
+            <h3 class="card-tittle">Hamburguesa Bacon</h3>
+            <p class="parrafo-box">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus animi, beatae consequuntur reiciendis amet aut!
+            </p>
+            <h3 class="precio">$500</h3>
+            <button class="btnAgregar">
+              Agregar al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+          <div class="box">
+            <img class="box-img" src="img/comidas/hamburguesa-3.jpg" alt="" />
+            <h3 class="card-tittle">Hamburguesa Huevo</h3>
+            <p class="parrafo-box">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus animi, beatae consequuntur reiciendis amet aut!
+            </p>
+            <h3 class="precio">$500</h3>
+            <button class="btnAgregar">
+              Agregar al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Seccion de pizzas -->
+        <div class="box-comidas-container pizzasContainer desactive">
+          <div class="box">
+            <img class="box-img" src="img/comidas/pizza-1.webp" alt="" />
+            <h3 class="card-tittle">Pizza Jamón & Tomate</h3>
+            <p class="parrafo-box">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus animi, beatae consequuntur reiciendis amet aut!
+            </p>
+            <h3 class="precio">$1000</h3>
+            <button class="btnAgregar">
+              Agregar al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+          <div class="box">
+            <img class="box-img" src="img/comidas/pizza-2.webp" alt="" />
+            <h3 class="card-tittle">Pizza 4 Estaciones</h3>
+            <p class="parrafo-box">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus animi, beatae consequuntur reiciendis amet aut!
+            </p>
+            <h3 class="precio">$1000</h3>
+            <button class="btnAgregar">
+              Agregar al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+          <div class="box">
+            <img class="box-img" src="img/comidas/pizza-3.webp" alt="" />
+            <h3 class="card-tittle">Pizza Jamón & Rucula</h3>
+            <p class="parrafo-box">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus animi, beatae consequuntur reiciendis amet aut!
+            </p>
+            <h3 class="precio">$1000</h3>
+            <button class="btnAgregar">
+              Agregar al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Seccion de bebidas -->
+        <div class="box-comidas-container bebidasContainer desactive">
+          <div class="box">
+            <img class="box-img" src="img/comidas/bebida-1.jpg" alt="" />
+            <h3 class="card-tittle">CocaCola 330ml</h3>
+            <p class="parrafo-box">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus animi, beatae consequuntur reiciendis amet aut!
+            </p>
+            <h3 class="precio">$200</h3>
+            <button class="btnAgregar">
+              Agregar al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+          <div class="box">
+            <img class="box-img" src="img/comidas/bebida-2.jpg" alt="" />
+            <h3 class="card-tittle">SevenUp 330ml</h3>
+            <p class="parrafo-box">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus animi, beatae consequuntur reiciendis amet aut!
+            </p>
+            <h3 class="precio">$200</h3>
+            <button class="btnAgregar">
+              Agregar al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+          <div class="box">
+            <img class="box-img" src="img/comidas/bebida-3.jpg" alt="" />
+            <h3 class="card-tittle">Pepsi 330ml</h3>
+            <p class="parrafo-box">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Doloribus animi, beatae consequuntur reiciendis amet aut!
+            </p>
+            <h3 class="precio">$200</h3>
+            <button class="btnAgregar">
+              Agregar al carrito <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------ INICIO TESTIMONIOS ------------------>
+    <!-------------------------------------------------------->
+    <section class="testimonios" id="testimonios">
+      <div class="text">
+        <h2>Testimonios</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          exercitationem ipsam deserunt tenetur totam eligendi accusantium
+          expedita dolorem voluptas consequuntur!
+        </p>
+      </div>
+      <div class="box-testimonios">
+        <div class="box">
+          <img src="img/tetimonios/testimonio-1.jpg" alt="" />
+          <p class="parrafo-testimonios">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+            ratione tenetur saepe voluptas.
+          </p>
+          <h3>Robert Davies</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/tetimonios/testimonio-2.jpg" alt="" />
+          <p class="parrafo-testimonios">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+            ratione tenetur saepe voluptas.
+          </p>
+          <h3>Laura Miller</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/tetimonios/testimonio-3.jpg" alt="" />
+          <p class="parrafo-testimonios">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+            ratione tenetur saepe voluptas.
+          </p>
+          <h3>Thom Firz</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------- INICIO PROMOCION ------------------->
+    <!-------------------------------------------------------->
+    <section class="promocion">
+      <div class="container-promo">
+        <div class="text-promocion">
+          <p>por 10% de descuento</p>
+          <h3>
+            obtener código <br />
+            promocional
+          </h3>
+        </div>
+        <div class="email-promocion">
+          <input
+            type="email"
+            name="email"
+            id="emailPromo"
+            placeholder="Ingrese su correo electrónico"
+          />
+          <button class="btn-enviar-promo">Enviar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------- INICIO FOOTER -------------------->
+    <!-------------------------------------------------------->
+    <footer class="footer" id="footer">
+      <div class="container-footer">
+        <div class="about">
+          <h3 class="titulo-footer">About Us</h3>
+          <ul>
+            <li class="link-footer"><a href="#">Our History</a></li>
+            <li class="link-footer"><a href="#">Values In Action</a></li>
+            <li class="link-footer"><a href="#">News & Notifications</a></li>
+            <li class="link-footer"><a href="#">Franchise Info</a></li>
+            <li class="link-footer"><a href="#">Digital Accessibility</a></li>
+            <li class="link-footer">
+              <a href="#">Standards of Business Conduct</a>
+            </li>
+          </ul>
+        </div>
+        <div class="careers">
+          <h3 class="titulo-footer">Careers</h3>
+          <ul>
+            <li class="link-footer"><a href="#">Education Opportunities</a></li>
+            <li class="link-footer"><a href="#">Meet Our People</a></li>
+            <li class="link-footer"><a href="#">Working with Us</a></li>
+            <li class="link-footer"><a href="#">Apply Now</a></li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3 class="titulo-footer">Contact Us</h3>
+          <ul>
+            <li class="link-footer">
+              <a href="#"
+                >8515 Greenville Ave, Suite S206 Dallas TX 75243-7039 USA</a
+              >
+            </li>
+            <li class="link-footer"><a href="#">YourEmail@gmail.com</a></li>
+            <li class="link-footer"><a href="#">+123456789</a></li>
+            <li class="link-footer"><a href="#">Mobile App</a></li>
+            <li class="redes">
+              <a href="#"><i class="fa-brands fa-facebook margin-right"></i></a
+              ><a href="#"
+                ><i class="fa-brands fa-instagram margin-right"></i></a
+              ><a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
